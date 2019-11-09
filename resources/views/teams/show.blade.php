@@ -33,6 +33,14 @@
         @endif
     </div>
 
+    @if (session('message'))
+    
+    <div class="alert alert-danger">
+        {{ session('message') }}
+    </div>
+    
+    @endif
+
     <form method="POST" action="{{ route('create.comment', ['id' => $team->id]) }}">
         @csrf
     
