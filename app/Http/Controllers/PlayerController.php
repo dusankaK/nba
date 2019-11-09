@@ -15,7 +15,7 @@ class PlayerController extends Controller
     
     public function show($id)
     {
-        $player = Player::with('team')->find($id);;
+        $player = Player::with('team')->findOrFail($id);
 
         return view('players.show', compact('player'));
     }
