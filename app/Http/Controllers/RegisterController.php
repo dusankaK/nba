@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\RegisterRequest;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Mail\VerificationMail;
+use App\Http\Requests\RegisterRequest;
 use App\User;
 
 class RegisterController extends Controller
@@ -28,9 +30,8 @@ class RegisterController extends Controller
 
         $user->save();//user sacuvan
         
-        auth()->login($user);
+        Mail::to($user)->send(new VerificationMail($user->id));
 
-        return redirect('/');
-
+        return view('login.create')->with('message', 'Please verify your email by following link we sent to you');
     }
 }

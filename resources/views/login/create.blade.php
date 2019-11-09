@@ -3,6 +3,13 @@
 
 @section('content')
 
+    @if (isset($message))
+        <div class="alert alert-succes">
+            {{ $message }}
+        </div>
+        
+    @endif
+
 <form method="POST" action="/login">
     @csrf
 

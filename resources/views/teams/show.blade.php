@@ -43,7 +43,7 @@
             @include('partials.error-message' , ['fieldName' => 'content'])
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit comment</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
 
     </form>
 

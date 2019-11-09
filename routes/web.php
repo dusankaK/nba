@@ -29,3 +29,4 @@ Route::post('/login', 'LoginController@store');
 Route::get('/logout', 'LoginController@destroy');
 
 Route::post('/create-comment/{id}', 'CommentsController@store')->name('create.comment');
+Route::get('/login/verify/{id}', 'LoginController@verifyEmail')->name('login.verify');
