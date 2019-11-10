@@ -33,3 +33,4 @@ Route::get('/login/verify/{id}', 'LoginController@verifyEmail')->name('login.ver
 
 Route::get('/news', 'NewsController@index');
 Route::get('/news/{id}', 'NewsController@show');
+Route::get('/news/team/{team}', 'NewsController@teamIndex');
