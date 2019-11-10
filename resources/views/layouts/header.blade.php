@@ -10,6 +10,7 @@
         
     <div class="navbar d-flex flex-row justify-content-between" style="background-color:antiquewhite;">
         <div class="p-3">
+            <a href="/news" class="m-0 mr-2 p-0"><strong>News</strong></a>
             <a href="/" class="m-0 p-0"><strong>Teams</strong></a>
         </div>
         <div class="p-3">
