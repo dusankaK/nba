@@ -2,6 +2,15 @@
 @section('title', 'News')
 
 @section('content')
+
+    @if (session('message'))
+    
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+
+    @endif
+
     
     @foreach ($news as $vest)
 

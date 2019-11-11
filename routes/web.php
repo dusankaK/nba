@@ -14,6 +14,7 @@
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\NewsController;
 
 
 Route::get('/', 'TeamController@index');
@@ -31,6 +32,10 @@ Route::get('/logout', 'LoginController@destroy');
 Route::post('/create-comment/{id}', 'CommentsController@store')->name('create.comment');
 Route::get('/login/verify/{id}', 'LoginController@verifyEmail')->name('login.verify');
 
+Route::get('/news/create', 'NewsController@create');
+
 Route::get('/news', 'NewsController@index');
 Route::get('/news/{id}', 'NewsController@show');
 Route::get('/news/team/{team}', 'NewsController@teamIndex');
+
+Route::post('/news/create', 'NewsController@store');
